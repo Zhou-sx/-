@@ -177,7 +177,7 @@ void check_erase() {
 		}
 	}
 	if (!erase_level.empty()) {
-		unsigned int loc = 0;
+		int loc = 0;
 		//loc表示该行要下落的层数
 		for (int i = Y_unit - 1;i >= 0;i--) {
 			int temp = i;
@@ -243,6 +243,7 @@ void run() {
 				flag = b.rotate();
 				break;
 			default:
+				flag = b.move(unit);
 				break;
 			}
 		}
